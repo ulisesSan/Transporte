@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{49696DC6-D93A-4BFC-9D97-6FCFE3811363}|PruebaConexion">
+  <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="API/Controllers/UsuarioController.cs">
+    <Files>
+      <File FileName="API/Controllers/UsuarioController.cs" Line="40" Column="27" />
+      <File FileName="API/Models/vehiculos.cs" Line="17" Column="1" />
+      <File FileName="API/Conexion/Conector.cs" Line="88" Column="1" NotebookId="1" />
+      <File FileName="API/Controllers/MecanicosController.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="API/Controllers/OperadorController.cs" NotebookId="1" />
+      <File FileName="API/Models/usuarios.cs" Line="13" Column="17" NotebookId="1" />
+      <File FileName="API/Controllers/VehiculosController.cs" Line="42" Column="61" NotebookId="1" />
+      <File FileName="API/Models/operadores.cs" Line="11" Column="23" NotebookId="1" />
+      <File FileName="API/Models/mecanicos.cs" Line="15" Column="1" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="API" expanded="True">
+            <Node name="API" expanded="True">
+              <Node name="Conexion" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="vehiculos.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

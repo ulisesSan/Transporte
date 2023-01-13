@@ -19,20 +19,13 @@ namespace PruebaConexion.Conexion
 
         public string  ListaTabla(string Procedimiento)
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "localhost";
-            builder.UserID = "sa";
-            //static string port = "1433";
-            builder.Password = "Solosoyyo12";
-            builder.InitialCatalog = "transporte";
-
-            String data = null;
-            SqlConnection conexion = new SqlConnection(cadenaConexion);
+            String data = "";
+            SqlConnection conexion = new (cadenaConexion);
             SqlDataReader reader;
 
             try
             {
-                SqlCommand command = new SqlCommand(Procedimiento,conexion);
+                SqlCommand command = new (Procedimiento,conexion);
                 conexion.Open();
                 reader = command.ExecuteReader();
 
@@ -40,28 +33,68 @@ namespace PruebaConexion.Conexion
                 {
                     data = reader.GetString(0);
                 }
-                
+                return data;
             }
             catch(SqlException Ex)
             {
                 Console.WriteLine(Ex);
-                return data = null;
+                return data;
             }
             finally
             {
                 conexion.Close();
             }
-            return data;
+
         }
 
-        public DataTable Listar(string nombreProcedimiento, List<Parametro> parametros = null)
+        public DataTable Listar(string nombreProcedimiento, List<Parametro>? parametros = null)
         {
-            SqlConnection conexion = new SqlConnection(cadenaConexion);
+            SqlConnection conexion = new (cadenaConexion);
+            DataTable? tabla = new();
 
             try
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand(nombreProcedimiento, conexion);
+                SqlCommand cmd = new(nombreProcedimiento, conexion)
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
+
+                if (parametros != null)
+                {
+                    foreach (var parametro in parametros)
+                    {
+                        cmd.Parameters.AddWithValue(parametro.Nombre, parametro.Valor);
+                    }
+                }
+                
+                SqlDataAdapter da = new (cmd);
+                da.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return tabla;
+
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            
+        }
+
+        public bool Ejecutar(string nombreProcedimiento, List<Parametro>? parametros = null)
+        {
+            SqlConnection conexion = new (cadenaConexion);
+
+
+            try
+            {
+                conexion.Open();
+                SqlCommand cmd = new(nombreProcedimiento, conexion);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                 if (parametros != null)
@@ -71,18 +104,15 @@ namespace PruebaConexion.Conexion
                         cmd.Parameters.AddWithValue(parametro.Nombre, parametro.Valor);
                     }
                 }
-                DataTable tabla = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(tabla);
 
+                int i = cmd.ExecuteNonQuery();
 
-                return tabla;
+                return (i > 0) ? true : false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-                return null;
-
+                Console.WriteLine(ex.Message);
+                return false;
             }
             finally
             {
