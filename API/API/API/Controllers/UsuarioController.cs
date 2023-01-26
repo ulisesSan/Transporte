@@ -62,5 +62,33 @@ namespace PruebaConexion.Controllers
 				
 			};
 		}
+
+		[HttpPost]
+		[Route("actualizaUsuario")]
+		public dynamic actualizaUsuario(usuarios usuario, string passwd)
+		{
+			Conector conexion = new Conector();
+			List<Parametro>? parametros = new List<Parametro>
+			{
+				new Parametro("@id_usuario",usuario.id_usuario),
+				new Parametro("@Unombre",usuario.nombre),
+                new Parametro("@Uapellido_p",usuario.apellido_p),
+                new Parametro("@Uapellido_m",usuario.apellido_m),
+                new Parametro("@Ustatus_u",usuario.status_u),
+                new Parametro("@Udireccion",usuario.direccion),
+				new Parametro("@Upasswd", passwd),
+                new Parametro("@Ufechaingreso",usuario.fecha_ingreso),
+                new Parametro("@Upuesto",usuario.puesto)
+            };
+
+			bool exito = conexion.Ejecutar("actualizaUsuario", parametros);
+
+			return new
+			{
+				Success = exito,
+				message = exito ? "exito" : "Ocurrio un error",
+				
+			};
+		}
 	}
 }

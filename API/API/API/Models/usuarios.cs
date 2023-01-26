@@ -3,7 +3,7 @@ namespace PruebaConexion.Models
 {
 	public class usuarios
 	{
-		public int id_usuario { set; get; }
+		public string? id_usuario { set; get; }
 		public string? nombre {set; get;}
 		public string? apellido_p { set; get; }
 		public string? apellido_m { set; get;}
