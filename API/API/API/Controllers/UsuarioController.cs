@@ -70,7 +70,7 @@ namespace PruebaConexion.Controllers
 			Conector conexion = new Conector();
 			List<Parametro>? parametros = new List<Parametro>
 			{
-				new Parametro("@id_usuario",usuario.id_usuario),
+				new Parametro("@idUsuario",usuario.id_usuario),
 				new Parametro("@Unombre",usuario.nombre),
                 new Parametro("@Uapellido_p",usuario.apellido_p),
                 new Parametro("@Uapellido_m",usuario.apellido_m),
