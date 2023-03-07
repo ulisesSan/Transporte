@@ -1,0 +1,7 @@
+{
+    "/usuarios/*": {
+        "target": "http://localhost:7041",
+        "secure": false,
+        "loglevel": "debug"
+    }
+}

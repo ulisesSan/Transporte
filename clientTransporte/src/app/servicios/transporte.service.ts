@@ -8,23 +8,23 @@ import { usuario } from '../models/Usuario'
 })
 export class TransporteService {
 
-  API_URI ='https://localhost:7041/'
+  API_URI ='https://localhost:7041'
 
   constructor(private http: HttpClient) { }
 
   getUsuarios(){
-    return this.http.get(`${this.API_URI}/usuarios/listarusuarios`)
+    return this.http.get(`/usuarios/listarusuarios`)
   }
 
   getUsuario(id:string){
-    return this.http.get(`${this.API_URI}/usuarios/muestrausuario${id}`)
+    return this.http.get(`${this.API_URI}usuarios/muestrausuario${id}`)
   }
 
   saveUsuario(usuario: usuario){
-    return this.http.post(`${this.API_URI}/usuarios/agregausuario`,usuario)
+    return this.http.post(`${this.API_URI}usuarios/agregausuario`,usuario)
   }
 
   updateUsuario(id:string,usuario: usuario){
-    return this.http.post(`${this.API_URI}/usuarios/agregausuario${id}`,usuario)
+    return this.http.post(`${this.API_URI}usuarios/agregausuario${id}`,usuario)
   }
 }
