@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 //Imports de los componenetes
 import {UsuariosListComponent} from './components/usuarios-list/usuarios-list.component';
 
+
 const routes: Routes = [
   {
     path: '',

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UsuarioFormComponent } from './components/usuario-form/usuario-form.component';
 import { UsuariosListComponent } from './components/usuarios-list/usuarios-list.component';
+//importando el servicio necesario para proveer la informacion
+import {TransporteService} from './servicios/transporte.service'
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { UsuariosListComponent } from './components/usuarios-list/usuarios-list.
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TransporteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

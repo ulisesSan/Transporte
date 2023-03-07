@@ -36,6 +36,30 @@ namespace PruebaConexion.Controllers
 			};
 		}
 
+		[HttpGet]
+		[Route("muestraUsuario")]
+		public dynamic Listarusuario(int usuario)
+		{
+			Conector conexion = new Conector();
+			List<Parametro>? paramentros = new List<Parametro>{
+				new Parametro("@id_usuario", usuario.ToString())
+			};
+
+			DataTable consultaUsuario = conexion.Listar("muestraUsuario",paramentros);
+
+			string usuarioLista = JsonConvert.SerializeObject(consultaUsuario);
+			
+            return new
+			{
+				success = true,
+				message = "exito",
+				result = new
+				{
+					usuario = JsonConvert.DeserializeObject<List<usuarios>>(usuarioLista)
+				}
+			};
+		}
+
 		[HttpPost]
 		[Route("agregaUsuario")]
 		public dynamic agregaUsuario(usuarios usuario, string passwd)
