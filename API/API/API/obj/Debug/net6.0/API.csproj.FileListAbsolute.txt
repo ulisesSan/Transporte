@@ -110,3 +110,8 @@
 /Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.pdb
 /Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.genruntimeconfig.cache
 /Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/ref/API.dll
+/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Cors.dll
+/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Net.Http.Formatting.dll
+/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Http.dll
+/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Http.Cors.dll
+/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
