@@ -1,7 +1,7 @@
-<div class="md-col-5">
+<div class="md-col-5" *ngFor="let user of usuarios | async">
     <div class="card text-center">
         <div class="card-header">
-            <p for="nombre"></p>
+            {{user.nombre}}
         </div>
         <div class="card-body">
             
