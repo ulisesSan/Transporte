@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
+    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
   },
   "projects": {
-    "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj": {
+    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "projectUniqueName": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj",
-        "packagesPath": "/Users/ulisescaceres/.nuget/packages/",
-        "outputPath": "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/obj/",
+        "projectPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "packagesPath": "/home/ulises/.nuget/packages/",
+        "outputPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ulisescaceres/.nuget/NuGet/NuGet.Config"
+          "/home/ulises/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,8 +61,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -75,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     }
