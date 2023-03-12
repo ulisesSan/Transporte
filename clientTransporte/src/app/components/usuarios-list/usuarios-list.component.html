@@ -1,10 +1,13 @@
-<div class="md-col-5" *ngFor="let user of usuarios | async">
-    <div class="card text-center">
-        <div class="card-header">
-            {{user.nombre}}
+<div class="md-col-5" *ngFor="let user of usuarios.result.usuario">
+    <div class="card text-center container">
+        <div class="card-header" >
+            {{user.id_usuario}}
         </div>
         <div class="card-body">
-            
+            Nombre: {{user.nombre}} {{user.apellido_p}}  {{user.apellido_m}}
+        </div>
+        <div class="card-body">
+            Direccion: {{user.direccion}}
         </div>
     </div>
 </div>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
+    "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj": {}
   },
   "projects": {
-    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {
+    "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "projectUniqueName": "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "projectPath": "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj",
         "packagesPath": "/home/ulises/.nuget/packages/",
-        "outputPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/obj/",
+        "outputPath": "/home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ulises/.nuget/NuGet/NuGet.Config"
@@ -61,7 +61,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.406/RuntimeIdentifierGraph.json"
         }
       }
     }

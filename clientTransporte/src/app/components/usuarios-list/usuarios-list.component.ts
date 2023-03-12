@@ -17,13 +17,16 @@ export class UsuariosListComponent implements OnInit{
   }
 
   ngOnInit(){
-    imports: [BrowserModule]
-      this.usuarioService.getUsuarios().subscribe(
-        res => {
-          this.usuarios = res
-          console.log(this.usuarios)
-        },
-        err => console.log(err),
-      )
+      this.usuarioslist()
+  }
+
+  usuarioslist(){
+    this.usuarioService.getUsuarios().subscribe(
+      res => {
+        this.usuarios = res
+        console.log(this.usuarios)
+      },
+      err => console.log(err),
+    )
   }
 }
