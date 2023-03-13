@@ -43,7 +43,6 @@
 /home/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/API.deps.json
 /home/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/API.runtimeconfig.json
 /home/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/API.dll
-/home/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/ref/API.dll
 /home/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/API.pdb
 /home/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/Microsoft.OpenApi.dll
 /home/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/Newtonsoft.Json.dll
@@ -159,3 +158,4 @@
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.pdb
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.genruntimeconfig.cache
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/ref/API.dll
+/home/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/refint/API.dll

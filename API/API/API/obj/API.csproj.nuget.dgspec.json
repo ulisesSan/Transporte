@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj": {}
+    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
   },
   "projects": {
-    "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj": {
+    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj",
+        "projectUniqueName": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/ulises/Documentos/GitHub/Transporte/API/API/API/API.csproj",
+        "projectPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
         "packagesPath": "/home/ulises/.nuget/packages/",
-        "outputPath": "/home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/",
+        "outputPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ulises/.nuget/NuGet/NuGet.Config"
