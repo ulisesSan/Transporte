@@ -1,10 +1,9 @@
 export interface usuario{
     nombre?: string;
-    ap?: string;
-    am?: string;
-    status?: string;
+    apellido_p?: string;
+    apellido_m?: string;
+    status_u?: string;
     direccion?: string;
-    passwd?: string;
-    fechaIngreso?: string;
+    fecha_ingreso?: string;
     puesto?: string;
 }

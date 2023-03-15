@@ -9,6 +9,7 @@ import { UsuarioFormComponent } from './components/usuario-form/usuario-form.com
 import { UsuariosListComponent } from './components/usuarios-list/usuarios-list.component';
 //importando el servicio necesario para proveer la informacion
 import {TransporteService} from './servicios/transporte.service'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {TransporteService} from './servicios/transporte.service'
     
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [TransporteService],
   bootstrap: [AppComponent]

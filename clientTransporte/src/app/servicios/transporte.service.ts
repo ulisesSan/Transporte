@@ -18,11 +18,11 @@ export class TransporteService {
   }
 
   getUsuario(id:string){
-    return this.http.get<any>(`${this.API_URI}usuarios/muestrausuario${id}`)
+    return this.http.get<any>(`${this.API_URI}/usuarios/muestrausuario${id}`)
   }
 
-  saveUsuario(usuario: usuario){
-    return this.http.post(`${this.API_URI}usuarios/agregausuario`,usuario)
+  saveUsuario(usuario: usuario,pass: string){
+    return this.http.post(`${this.API_URI}/usuarios/agregausuario?passwd=${pass}`,usuario)
   }
 
   updateUsuario(id:string,usuario: usuario){
