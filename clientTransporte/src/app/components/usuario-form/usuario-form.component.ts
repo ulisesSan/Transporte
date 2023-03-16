@@ -1,6 +1,8 @@
 import { Component, HostBinding, Input } from '@angular/core';
 import { TransporteService } from 'src/app/servicios/transporte.service';
 import { usuario } from '../../models/usuario'
+import { Route, Router } from '@angular/router'
+import { UsuariosListComponent} from '../usuarios-list/usuarios-list.component'
 
 @Component({
   selector: 'app-usuario-form',
@@ -21,7 +23,7 @@ export class UsuarioFormComponent{
   };
 pass: string = "";
 
-  constructor(private usuarioService: TransporteService){
+  constructor(private usuarioService: TransporteService, private rutas: Router){
 
   }
 
@@ -33,6 +35,7 @@ pass: string = "";
     .subscribe(
       res => {
         console.log(res)
+        this.rutas.navigate(['/'])
       },
       err => console.error(err)
     )

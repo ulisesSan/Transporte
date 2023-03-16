@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //Imports de los componenetes
@@ -19,7 +19,13 @@ const routes: Routes = [
   {
     path: 'usuario-form',
     component:UsuarioFormComponent
+  },
+
+  {
+    path: 'usuario-form/edit:id',
+    component: UsuarioFormComponent
   }
+
 ];
 
 @NgModule({
