@@ -33,7 +33,7 @@ pass: string = "";
     if(params['id']){
       this.usuarioService.getUsuario(params['id']).subscribe(
         res => {console.log(res.result.usuario)
-          this.usuarioData = res.result.usuario
+          this.usuarioData = res
           console.log(this.usuarioData)
         },
         err => console.error(err)
