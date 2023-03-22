@@ -23,11 +23,6 @@
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.csproj.CoreCompileInputs.cache
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.MvcApplicationPartsAssemblyInfo.cs
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.MvcApplicationPartsAssemblyInfo.cache
-/Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/staticwebassets/msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/staticwebassets/msbuild.build.API.props
-/Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.API.props
-/Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.API.props
-/Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/staticwebassets.pack.json
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/staticwebassets.build.json
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/staticwebassets.development.json
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/scopedcss/bundle/API.styles.css
@@ -159,3 +154,8 @@
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.genruntimeconfig.cache
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/ref/API.dll
 /home/ulises/Documents/GitHub/Transporte/API/API/API/obj/Debug/net6.0/refint/API.dll
+/Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Cors.dll
+/Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Net.Http.Formatting.dll
+/Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Http.dll
+/Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Http.Cors.dll
+/Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll

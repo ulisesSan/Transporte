@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
+    "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
   },
   "projects": {
-    "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {
+    "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "projectUniqueName": "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
-        "packagesPath": "/home/ulises/.nuget/packages/",
-        "outputPath": "/home/ulises/Documents/GitHub/Transporte/API/API/API/obj/",
+        "projectPath": "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "packagesPath": "/Users/ulises/.nuget/packages/",
+        "outputPath": "/Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ulises/.nuget/NuGet/NuGet.Config"
+          "/Users/ulises/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.407/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.407/RuntimeIdentifierGraph.json"
         }
       }
     }

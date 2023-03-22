@@ -1,8 +1,7 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { TransporteService } from 'src/app/servicios/transporte.service';
 import { usuario } from '../../models/usuario'
-import { ActivatedRoute,Route, Router } from '@angular/router'
-import { UsuariosListComponent} from '../usuarios-list/usuarios-list.component'
+import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
   selector: 'app-usuario-form',
