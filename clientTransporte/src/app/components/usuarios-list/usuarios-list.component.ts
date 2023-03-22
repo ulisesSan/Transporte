@@ -27,4 +27,14 @@ export class UsuariosListComponent implements OnInit{
       err => console.log(err),
     )
   }
+
+  editUsr(id: string){
+    console.log(id)
+    this.usuarioService.getUsuario(id).subscribe(
+      res =>{
+        console.log(res)
+      },
+      err => console.error(err)
+    )
+  }
 }

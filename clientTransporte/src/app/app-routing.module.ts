@@ -22,7 +22,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'usuario-form/edit:id',
+    path: 'usuario-form/edit/:id',
     component: UsuarioFormComponent
   }
 

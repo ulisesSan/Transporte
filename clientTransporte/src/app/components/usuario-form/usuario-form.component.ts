@@ -1,7 +1,7 @@
 import { Component, HostBinding, Input } from '@angular/core';
 import { TransporteService } from 'src/app/servicios/transporte.service';
 import { usuario } from '../../models/usuario'
-import { Route, Router } from '@angular/router'
+import { ActivatedRoute,Route, Router } from '@angular/router'
 import { UsuariosListComponent} from '../usuarios-list/usuarios-list.component'
 
 @Component({
@@ -23,8 +23,23 @@ export class UsuarioFormComponent{
   };
 pass: string = "";
 
-  constructor(private usuarioService: TransporteService, private rutas: Router){
+  constructor(private usuarioService: TransporteService, private rutas: Router,private activeRouting: ActivatedRoute){
+    
+  }
 
+  ngOnInit(){
+    var params = this.activeRouting.snapshot.params;
+    console.log("This is a message from usuario-form and the id user is: ",params['id'])
+
+    if(params['id']){
+      this.usuarioService.getUsuario(params['id']).subscribe(
+        res => {console.log(res.result.usuario)
+          this.usuarioData = res.result.usuario
+          console.log(this.usuarioData)
+        },
+        err => console.error(err)
+      )
+    }
   }
 
   agregaUsuario(){

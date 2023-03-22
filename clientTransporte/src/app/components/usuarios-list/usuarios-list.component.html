@@ -9,7 +9,7 @@
                 <p class="h5">{{usr.nombre}} {{usr.apellido_p}} {{usr.apellido_m}}</p>
                 <button class="btn-success"> Info </button>
                 <p>  </p>
-                <button class="btn btn-warning">Modificar</button>
+                <button [routerLink]="['/usuario-form/edit', usr.id_usuario]" class="btn btn-warning">Modificar</button>
             </div>
         </div>
     </div>
