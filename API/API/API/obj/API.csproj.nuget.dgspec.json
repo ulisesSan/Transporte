@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
+    "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj": {}
   },
   "projects": {
-    "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj": {
+    "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "projectUniqueName": "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/ulises/Documents/GitHub/Transporte/API/API/API/API.csproj",
-        "packagesPath": "/Users/ulises/.nuget/packages/",
-        "outputPath": "/Users/ulises/Documents/GitHub/Transporte/API/API/API/obj/",
+        "projectPath": "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/API.csproj",
+        "packagesPath": "/Users/ulisescaceres/.nuget/packages/",
+        "outputPath": "/Users/ulisescaceres/Documents/GitHub/Transporte/API/API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ulises/.nuget/NuGet/NuGet.Config"
+          "/Users/ulisescaceres/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
