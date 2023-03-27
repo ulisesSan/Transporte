@@ -12,6 +12,7 @@ export class UsuarioFormComponent{
   [x: string]: any;
 
   usuarioData: usuario = {
+    id_usuario: '',
     nombre: '',
     apellido_p: '',
     apellido_m: '',
@@ -20,7 +21,9 @@ export class UsuarioFormComponent{
     fecha_ingreso: '',
     puesto: ''
   };
-pass: string = "";
+  pass: string = "";
+  id: string = "";
+  nuevoUsuario: boolean = true;
 
   constructor(private usuarioService: TransporteService, private rutas: Router,private activeRouting: ActivatedRoute){
     
@@ -31,6 +34,8 @@ pass: string = "";
     console.log("This is a message from usuario-form and the id user is: ",params['id'])
 
     if(params['id']){
+      this.id = params['id']
+      this.nuevoUsuario = false
       this.usuarioService.getUsuario(params['id']).subscribe(
         res => {console.log(res.result.usuario[0])
           this.usuarioData = res.result.usuario[0]
@@ -42,17 +47,26 @@ pass: string = "";
   }
 
   agregaUsuario(){
-    console.log(this.usuarioData)
-    console.log(this.pass)
-
-    this.usuarioService.saveUsuario(this.usuarioData,this.pass)
-    .subscribe(
-      res => {
-        console.log(res)
-        this.rutas.navigate(['/'])
-      },
-      err => console.error(err)
-    )
+    if(this.nuevoUsuario == false){
+      this.usuarioService.updateUsuario(this.usuarioData,this.pass,this.id)
+      .subscribe(
+        res => {
+          console.log(res)
+        },
+        err => console.error(err)
+      )
+    }
+    else{
+      console.log(this.usuarioData)
+      console.log(this.pass)
+      this.usuarioService.saveUsuario(this.usuarioData,this.pass)
+      .subscribe(
+        res => {
+          console.log(res)
+          this.rutas.navigate(['/'])
+        },
+        err => console.error(err)
+      )
+    }
   }
-
 }

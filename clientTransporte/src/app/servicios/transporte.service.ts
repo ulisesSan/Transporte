@@ -25,7 +25,7 @@ export class TransporteService {
     return this.http.post(`${this.API_URI}/usuarios/agregausuario?passwd=${pass}`,usuario)
   }
 
-  updateUsuario(id:string,usuario: usuario){
-    return this.http.post(`${this.API_URI}usuarios/agregausuario=${id}`,usuario)
+  updateUsuario(usuario: usuario, pass: string, id:string){
+    return this.http.post(`${this.API_URI}usuarios/agregausuario?passwd=${pass}&id=${id}`,usuario)
   }
 }
