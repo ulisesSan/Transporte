@@ -48,7 +48,7 @@ export class UsuarioFormComponent{
 
   agregaUsuario(){
     if(this.nuevoUsuario == false){
-      this.usuarioService.updateUsuario(this.usuarioData,this.pass,this.id)
+      this.usuarioService.updateUsuario(this.usuarioData,this.pass)
       .subscribe(
         res => {
           console.log(res)

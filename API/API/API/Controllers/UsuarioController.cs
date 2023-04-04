@@ -89,12 +89,12 @@ namespace PruebaConexion.Controllers
 
 		[HttpPost]
 		[Route("actualizaUsuario")]
-		public dynamic actualizaUsuario(usuarios usuario, string passwd, string id)
+		public dynamic actualizaUsuario(usuarios usuario, string passwd)
 		{
 			Conector conexion = new Conector();
 			List<Parametro>? parametros = new List<Parametro>
 			{
-				new Parametro("@idUsuario",id),
+				new Parametro("@idUsuario",usuario.id_usuario),
 				new Parametro("@Unombre",usuario.nombre),
                 new Parametro("@Uapellido_p",usuario.apellido_p),
                 new Parametro("@Uapellido_m",usuario.apellido_m),
