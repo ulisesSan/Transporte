@@ -15,7 +15,7 @@ export class VehiculosService {
     return this.http.get<any>(`${this.API_URI}/vehiculos/listavehiculos`)
   }
 
-  saveVehiculo(vehiculo: vehiculo): Observable<any>{
-    return this.http.post<any>(`${this.API_URI}/vehiculos/ingesavehiculo`,vehiculo)
+  saveVehiculo(vehiculo: vehiculo){
+    return this.http.post(`${this.API_URI}/Vehiculos/ingresaVehiculo`,vehiculo)
   }
 }

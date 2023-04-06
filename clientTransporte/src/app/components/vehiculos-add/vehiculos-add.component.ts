@@ -15,6 +15,8 @@ export class VehiculosAddComponent {
     marca: '',
     modelo: '',
     km_ingreso: '',
+    placas: '',
+    status_v: '',
     num_serie: ''
   };
 
@@ -26,7 +28,7 @@ export class VehiculosAddComponent {
 
   }
 
-  agregaUsuario(){
+  agregaVehiculo(){
     this.vehiculoService.saveVehiculo(this.vehiculoData).subscribe(
       res => {
         console.log(res)

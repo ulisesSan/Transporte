@@ -1,1 +1,30 @@
-<p>vehiculos-add works!</p>
+<div class="col-md-4 offset-md-4 text-center">
+    <div class="card">
+        <h3 class="h5">Agrega vehiculo</h3>
+        <div class="card-boy">
+            <form>
+                <div>
+                    <input type="text" [(ngModel)]="vehiculoData.marca" name="marca" placeholder="Marca">
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="vehiculoData.modelo" name="modelo" placeholder="Modelo">
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="vehiculoData.km_ingreso" name="km_ingreso" placeholder="Kilometraje de ingreso">
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="vehiculoData.num_serie" name="num_serie" placeholder="Numero de serie">
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="vehiculoData.status_v" name="status_v" placeholder="Estatus Vehiculo">
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="vehiculoData.placas" name="placas" placeholder="Placas">
+                </div>
+                <button class="btn btn-success" (click)="agregaVehiculo()">
+                    Agregar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
