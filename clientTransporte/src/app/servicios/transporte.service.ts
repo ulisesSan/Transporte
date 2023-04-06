@@ -29,3 +29,4 @@ export class TransporteService {
     return this.http.post(`${this.API_URI}/usuarios/actualizaUsuario?passwd=${pass}`,usuario)
   }
 }
+  
