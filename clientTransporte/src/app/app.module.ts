@@ -10,13 +10,15 @@ import { UsuariosListComponent } from './components/usuarios-list/usuarios-list.
 //importando el servicio necesario para proveer la informacion
 import {TransporteService} from './servicios/transporte.service'
 import { FormsModule } from '@angular/forms';
+import { VehiculosGetComponent } from './components/vehiculos-get/vehiculos-get.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     UsuarioFormComponent,
-    UsuariosListComponent
+    UsuariosListComponent,
+    VehiculosGetComponent
   ],
   imports: [
     
