@@ -11,7 +11,7 @@ export class VehiculosGetComponent {
 
   vehiculosData: any = []
 
-  constructor(private vehiculoservice: VehiculosService){
+  constructor(private vehiculoService: VehiculosService){
 
   }
 
@@ -20,10 +20,10 @@ export class VehiculosGetComponent {
   }
 
   vehiculoList(){
-    this.vehiculoservice.getVehiculo().subscribe(
+    this.vehiculoService.getVehiculo().subscribe(
       res => {
         this.vehiculosData = res
-        console.log(this.vehiculoservice)
+        console.log(this.vehiculosData)
       },
       err => console.error(err)
     ) 

@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 //Imports de los componenetes
 import {UsuariosListComponent} from './components/usuarios-list/usuarios-list.component';
 import { UsuarioFormComponent } from './components/usuario-form/usuario-form.component';
+import { VehiculosGetComponent } from './components/vehiculos-get/vehiculos-get.component';
+import { VehiculosAddComponent } from './components/vehiculos-add/vehiculos-add.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,16 @@ const routes: Routes = [
   {
     path: 'usuario-form/edit/:id',
     component: UsuarioFormComponent
+  },
+
+  {
+    path: 'vehiculos-get',
+    component: VehiculosGetComponent
+  }
+
+  {
+    path: 'vehiculos-add',
+    component: VehiculosAddComponent
   }
 
 ];

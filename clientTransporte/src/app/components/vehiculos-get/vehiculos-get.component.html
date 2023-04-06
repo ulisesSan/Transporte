@@ -1,1 +1,14 @@
-<p>vehiculos-get works!</p>
+<div class="row">
+    <div class="col-md-4" *ngFor="let vh of vehiculosData.vehiculos">
+        <div class="card-header">
+            <p hidden="true">{{vh.id_vehiculo}}</p>
+            <h3 class="h4 mb-1">{{vh.marca}}</h3>
+            <h3 class="h4 mb-1">{{vh.modelo}}</h3>
+        </div>
+        <div class="card-body">
+            <p class="h5">{{vh.num_serie}}</p>
+        </div>
+    </div>
+
+    <button [routerLink]="['/vehiculos-add']"></button>
+</div>

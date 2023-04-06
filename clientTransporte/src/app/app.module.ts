@@ -11,6 +11,7 @@ import { UsuariosListComponent } from './components/usuarios-list/usuarios-list.
 import {TransporteService} from './servicios/transporte.service'
 import { FormsModule } from '@angular/forms';
 import { VehiculosGetComponent } from './components/vehiculos-get/vehiculos-get.component';
+import { VehiculosAddComponent } from './components/vehiculos-add/vehiculos-add.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VehiculosGetComponent } from './components/vehiculos-get/vehiculos-get.
     NavComponent,
     UsuarioFormComponent,
     UsuariosListComponent,
-    VehiculosGetComponent
+    VehiculosGetComponent,
+    VehiculosAddComponent
   ],
   imports: [
     
