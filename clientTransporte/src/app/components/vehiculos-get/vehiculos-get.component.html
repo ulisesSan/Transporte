@@ -6,9 +6,12 @@
             <h3 class="h4 mb-1">{{vh.modelo}}</h3>
         </div>
         <div class="card-body">
+            <p class="h5">{{vh.placa}}</p>
             <p class="h5">{{vh.num_serie}}</p>
+
         </div>
     </div>
-
-    <button [routerLink]="['/vehiculos-add']"></button>
+    <div class="col-md-4">
+        <button [routerLink]="['/vehiculos-add']" class="btn btn-success">Agregar vehiculo</button>
+    </div>
 </div>

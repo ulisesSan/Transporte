@@ -31,7 +31,7 @@ const routes: Routes = [
   {
     path: 'vehiculos-get',
     component: VehiculosGetComponent
-  }
+  },
 
   {
     path: 'vehiculos-add',
