@@ -9,7 +9,6 @@ import { ActivatedRoute, Router } from '@angular/router'
   styleUrls: ['./usuario-form.component.css']
 })
 export class UsuarioFormComponent{
-  [x: string]: any;
 
   usuarioData: usuario = {
     id_usuario: '',

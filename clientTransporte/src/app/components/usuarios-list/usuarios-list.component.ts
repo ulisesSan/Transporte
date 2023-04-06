@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TransporteService } from '../../servicios/transporte.service';
+import { usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-usuarios-list',
