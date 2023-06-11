@@ -6,6 +6,7 @@ import {UsuariosListComponent} from './components/usuarios-list/usuarios-list.co
 import { UsuarioFormComponent } from './components/usuario-form/usuario-form.component';
 import { VehiculosGetComponent } from './components/vehiculos-get/vehiculos-get.component';
 import { VehiculosAddComponent } from './components/vehiculos-add/vehiculos-add.component';
+import { MecanicosComponent } from './components/mecanicos/mecanicos.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'vehiculos-add',
     component: VehiculosAddComponent
+  },
+  {
+    path: 'mecanicos',
+    component:MecanicosComponent
   }
 
 ];

@@ -144,7 +144,6 @@
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/scopedcss/bundle/API.styles.css
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.csproj.CopyComplete
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.dll
-/home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/refint/API.dll
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.pdb
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/API.genruntimeconfig.cache
 /home/ulises/Documentos/GitHub/Transporte/API/API/API/obj/Debug/net6.0/ref/API.dll
@@ -154,3 +153,4 @@
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Http.dll
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/System.Web.Http.Cors.dll
 /Users/ulises/Documents/GitHub/Transporte/API/API/API/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+/home/ulises/Documentos/GitHub/Transporte/API/API/API/bin/Debug/net6.0/ref/API.dll
