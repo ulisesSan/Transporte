@@ -1,15 +1,15 @@
 <div class="row">
-    <div class="col-md-4" *ngFor="let usr of mecanicos.mecanicos">
+    <div class="col-md-4" *ngFor="let mecanico of mecanicos.mecanicos">
         <div class="card text-center">
             <div class="card-header">
-                <p hidden="true">{{usr.id_usuario}}</p>
-                <h3 class="h4 mb-1"> {{usr.puesto}}</h3>
+                <p hidden="true">{{mecanico.id_usuario}}</p>
+                <h3 class="h4 mb-1">{{mecanico.status_m}}</h3>
             </div>
             <div class="card-body">
-                <p class="h5">{{usr.nombre}} {{usr.apellido_p}} {{usr.apellido_m}}</p>
-                <button class="btn-success"> Info </button>
+                <p class="h5">{{mecanico.nombre}} {{mecanico.apellido_p}} {{mecanico.apellido_m}}</p>
+                <button class="btn-success" hidden="true"> Info </button>
                 <p>  </p>
-                <button [routerLink]="['/usuario-form/edit', usr.id_usuario]" class="btn btn-warning">Modificar</button>
+                <button [routerLink]="['/usuario-form/edit', mecanico.id_usuario]" class="btn btn-warning">Modificar</button>
             </div>
         </div>
     </div>

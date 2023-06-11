@@ -19,6 +19,13 @@ export class MecanicosComponent {
   listMecanico(){
     this.mecanicoService.getMecanicos().subscribe(
       res =>{
+        
+        for(let i = 0; i <= res.mecanicos.length-1; i ++){
+          if(!res.mecanicos[i].status_m){
+            res.mecanicos[i].status_m = "Activo"
+            console.log(res.mecanicos[i].status_m)
+          }
+        }
         this.mecanicos = res
         console.log(this.mecanicos)
       },
