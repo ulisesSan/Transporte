@@ -72,9 +72,9 @@ namespace PruebaConexion.Controllers
                 new Parametro("@Uapellido_m",usuario.apellido_m),
                 new Parametro("@Ustatus_u",usuario.status_u),
                 new Parametro("@Udireccion",usuario.direccion),
-				new Parametro("@Upasswd", passwd),
                 new Parametro("@Ufechaingreso",usuario.fecha_ingreso),
-                new Parametro("@Upuesto",usuario.puesto)
+                new Parametro("@Upuesto",usuario.puesto),
+				new Parametro("@Upasswd", passwd)
             };
 
 			bool exito = conexion.Ejecutar("agregaUsuario", parametros);

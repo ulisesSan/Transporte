@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { VehiculosGetComponent } from './components/vehiculos-get/vehiculos-get.component';
 import { VehiculosAddComponent } from './components/vehiculos-add/vehiculos-add.component';
 import { MecanicosComponent } from './components/mecanicos/mecanicos.component';
+import { EditStatusMecanicoComponent } from './components/edit-status-mecanico/edit-status-mecanico.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MecanicosComponent } from './components/mecanicos/mecanicos.component';
     UsuariosListComponent,
     VehiculosGetComponent,
     VehiculosAddComponent,
-    MecanicosComponent
+    MecanicosComponent,
+    EditStatusMecanicoComponent
   ],
   imports: [
     
