@@ -1,0 +1,190 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[mantenimiento](
+	[id_mantenimiento] [int] IDENTITY(1,1) NOT NULL,
+	[id_vehiculo] [int] NULL,
+	[id_mecanico] [int] NULL,
+	[km_actual] [decimal](10, 1) NULL,
+	[fecha] [date] NULL,
+	[notasInicio] [varchar](250) NULL,
+	[notasFinal] [varchar](250) NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[mantenimiento] ADD PRIMARY KEY CLUSTERED 
+(
+	[id_mantenimiento] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[mecanicos](
+	[id_mecanico] [int] NULL,
+	[status_m] [varchar](50) NULL,
+	[notas] [varchar](250) NULL
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[operadores](
+	[id_operador] [int] NULL,
+	[id_vehiculo] [int] NULL,
+	[status_o] [varchar](50) NULL,
+	[notas] [varchar](200) NULL
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[usuarios](
+	[id_usuario] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [varchar](50) NULL,
+	[apellido_p] [varchar](50) NULL,
+	[apellido_m] [varchar](50) NULL,
+	[status_u] [varchar](20) NULL,
+	[direccion] [varchar](200) NULL,
+	[passwd] [varchar](256) NULL,
+	[fecha_ingreso] [date] NULL,
+	[puesto] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[vehiculos](
+	[id_vehiculo] [int] IDENTITY(1,1) NOT NULL,
+	[marca] [varchar](50) NULL,
+	[modelo] [varchar](50) NULL,
+	[km_ingreso] [numeric](10, 1) NULL,
+	[fecha_ingreso] [date] NULL,
+	[status_v] [varchar](50) NULL,
+	[placas] [varchar](8) NULL,
+	[num_serie] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+
+
+ALTER TABLE [dbo].[mantenimiento]  WITH CHECK ADD  CONSTRAINT [fk_mecanico_mant] FOREIGN KEY([id_mecanico])
+REFERENCES [dbo].[usuarios] ([id_usuario])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[mantenimiento] CHECK CONSTRAINT [fk_mecanico_mant]
+GO
+ALTER TABLE [dbo].[mantenimiento]  WITH CHECK ADD  CONSTRAINT [fk_vehiculo_mant] FOREIGN KEY([id_vehiculo])
+REFERENCES [dbo].[vehiculos] ([id_vehiculo])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[mantenimiento] CHECK CONSTRAINT [fk_vehiculo_mant]
+GO
+
+ALTER TABLE [dbo].[mecanicos]  WITH CHECK ADD  CONSTRAINT [fk_mecanico_usr] FOREIGN KEY([id_mecanico])
+REFERENCES [dbo].[usuarios] ([id_usuario])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[mecanicos] CHECK CONSTRAINT [fk_mecanico_usr]
+GO
+
+ALTER TABLE [dbo].[operadores]  WITH CHECK ADD  CONSTRAINT [fk_operador_usr] FOREIGN KEY([id_operador])
+REFERENCES [dbo].[usuarios] ([id_usuario])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[operadores] CHECK CONSTRAINT [fk_operador_usr]
+GO
+ALTER TABLE [dbo].[operadores]  WITH CHECK ADD  CONSTRAINT [fk_operador_vehiculo] FOREIGN KEY([id_vehiculo])
+REFERENCES [dbo].[vehiculos] ([id_vehiculo])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[operadores] CHECK CONSTRAINT [fk_operador_vehiculo]
+GO
+ALTER TABLE [dbo].[usuarios] ADD PRIMARY KEY CLUSTERED 
+(
+	[id_usuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[vehiculos] ADD PRIMARY KEY CLUSTERED 
+(
+	[id_vehiculo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+create procedure [dbo].[actualizaUsuario] @idUsuario int, @Unombre varchar(50), @Uapellido_p varchar(50), @Uapellido_m varchar(50),
+    @Ustatus_u varchar(50), @Udireccion varchar(250), @Upasswd varchar(256), @Ufechaingreso varchar(15), @Upuesto varchar(50) AS
+    
+    update usuarios set nombre = @Unombre, apellido_p = @Uapellido_p, apellido_m = @Uapellido_m, status_u = @Ustatus_u, direccion = @Udireccion, passwd = @Upasswd, fecha_ingreso = @Ufechaingreso, puesto = @Upuesto
+    where id_usuario = @idUsuario;
+GO
+
+create procedure [dbo].[agregaUsuario] @Unombre varchar(50), @Uapellido_p varchar(50), @Uapellido_m varchar(50),
+    @Ustatus_u varchar(50), @Udireccion varchar(250), @Upasswd varchar(256), @Ufechaingreso varchar(15), @Upuesto varchar(50) AS
+    declare @N varchar(50) = (select nombre from usuarios where nombre = @Unombre);
+    declare @AP varchar(50) = (select apellido_p from usuarios where apellido_p = @Uapellido_p);
+    declare @AM varchar(50) = (select Apellido_m from usuarios where apellido_m = @Uapellido_m);
+    if(@Unombre = @N and @AP = @Uapellido_p AND @AM = @Uapellido_m )
+    BEGIN
+        Select 'Usuario ya existe'
+    END
+    else
+    BEGIN
+        insert into usuarios(nombre, apellido_p, apellido_m, status_u,direccion,passwd,fecha_ingreso,puesto)
+        VALUES (@Unombre,@Uapellido_p,@Uapellido_m,@Ustatus_u,@Udireccion,@Upasswd,@Ufechaingreso,@Upuesto)
+        declare @Usuario_ID varchar(50) = (select id_usuario from usuarios where nombre = @Unombre and @Uapellido_p = apellido_p and @Uapellido_m = apellido_m)
+
+        if (@Upuesto = 'Mecanico' or @Upuesto = 'mecanico')
+        begin
+            insert into mecanicos (id_mecanico)values (@Usuario_ID)
+        END
+        else
+        BEGIN
+            IF(@Upuesto = 'Operador' or @Upuesto = 'operador')
+            BEGIN
+                insert into operadores (id_operador) values (@Usuario_ID);
+            END
+        END
+    end
+
+GO
+
+create procedure [dbo].[agregaVehiculo] @marca varchar(50),@modelo varchar(50),@km_ingreso numeric(10,1),@fecha_ingreso date,@status_v varchar(50),@placas varchar(8)
+    ,@num_serie varchar(50) AS
+    declare @Vehiculo int = (select count(id_vehiculo) from vehiculos where @placas = placas and @num_serie = num_serie)
+    if(@vehiculo = 1)
+    BEGIN
+        Select 'Error: ya existe el vehiculo'
+    END
+    ELSE
+    BEGIN
+        insert into vehiculos (marca,modelo,km_ingreso,fecha_ingreso,status_v,placas,num_serie) values
+         (@marca,@modelo,@km_ingreso,@fecha_ingreso,@status_v,@placas,@num_serie)
+    END
+    
+GO
+
+create procedure [dbo].[listaMecanicos] as
+select mecanicos.id_mecanico, usuarios.nombre, usuarios.apellido_p, usuarios.apellido_m,mecanicos.status_m, notas from mecanicos, usuarios where mecanicos.id_mecanico
+    = usuarios.id_usuario;
+GO
+
+create procedure [dbo].[listaOperadores] as
+select operadores.id_operador, usuarios.nombre, usuarios.apellido_p, usuarios.apellido_m,operadores.status_o, notas from operadores, usuarios where operadores.id_operador
+    = usuarios.id_usuario;
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create procedure [dbo].[listarUsuarios] as select * from usuario;
+GO
+
+create procedure [dbo].[listaUsuarios] as
+    Select * from usuarios
+GO
+
+create procedure [dbo].[listaVehiculos] AS 
+    select * from vehiculos;
+GO
+
+CREATE PROCEDURE [dbo].[muestraUsuario] @id_usuario int
+AS 
+SELECT * from usuarios where id_usuario = @id_usuario
+GO
