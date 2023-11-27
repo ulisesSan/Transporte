@@ -12,5 +12,16 @@ namespace PruebaConexion.Models
 		public string? fecha_ingreso { set; get; }
 		public string? puesto { set; get; }
 	}
+
+	/*public record usuarios{
+		public string id_usuario;
+		public string nombre;
+		public string apellido_p;
+		public string apellido_m;
+		public string status_u;
+		public string direccion;
+		public string fecha_ingreso;
+		public string puesto;
+	}*/
 }
 

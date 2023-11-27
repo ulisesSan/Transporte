@@ -5623,19 +5623,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/ulisescaceres/.nuget/packages/": {}
+    "/home/ulises/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ulisescaceres/Documents/github/Transporte/API/API/API/API.csproj",
+      "projectUniqueName": "/home/ulises/Documents/git/Transporte/API/API/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/ulisescaceres/Documents/github/Transporte/API/API/API/API.csproj",
-      "packagesPath": "/Users/ulisescaceres/.nuget/packages/",
-      "outputPath": "/Users/ulisescaceres/Documents/github/Transporte/API/API/API/obj/",
+      "projectPath": "/home/ulises/Documents/git/Transporte/API/API/API/API.csproj",
+      "packagesPath": "/home/ulises/.nuget/packages/",
+      "outputPath": "/home/ulises/Documents/git/Transporte/API/API/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/ulisescaceres/.nuget/NuGet/NuGet.Config"
+        "/home/ulises/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -5698,7 +5698,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.414/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.417/RuntimeIdentifierGraph.json"
       }
     }
   }
