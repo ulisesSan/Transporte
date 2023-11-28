@@ -24,4 +24,3 @@ namespace PruebaConexion.Models
 		public string puesto;
 	}*/
 }
-
