@@ -9,21 +9,21 @@ import { Observable } from 'rxjs';
 })
 export class TransporteService {
 
-  API_URI ='https://localhost:7041'
+  API_URI ='http://127.0.0.1:8080'
 
   constructor(private http: HttpClient) { }
 
   getUsuarios(): Observable<any>{
-    return this.http.get<any>(`${this.API_URI}/usuarios/listarusuarios`)
+    return this.http.get<any>(`${this.API_URI}/usuario`)
   }
 
   getUsuario(id:string){
-    return this.http.get<any>(`${this.API_URI}/usuarios/muestrausuario?usuario=${id}`)
+    return this.http.get<any>(`${this.API_URI}/usuarios?usuario`)
   }
 
-  saveUsuario(usuario: usuario,pass: string){
-    return this.http.post(`${this.API_URI}/usuarios/agregausuario?passwd=${pass}`,usuario)
-  }
+  saveUsuario(usuario: usuario){
+    return this.http.post(`${this.API_URI}/usuarios`,usuario)
+ }
 
   updateUsuario(usuario: usuario, pass: string,){
     return this.http.post(`${this.API_URI}/usuarios/actualizaUsuario?passwd=${pass}`,usuario)

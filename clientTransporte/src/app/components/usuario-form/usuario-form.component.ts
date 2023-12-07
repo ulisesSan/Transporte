@@ -58,7 +58,7 @@ export class UsuarioFormComponent{
     else{
       console.log(this.usuarioData)
       console.log(this.pass)
-      this.usuarioService.saveUsuario(this.usuarioData,this.pass)
+      this.usuarioService.saveUsuario(this.usuarioData)
       .subscribe(
         res => {
           console.log(res)

@@ -1,4 +1,4 @@
-package models;
+package com.transporte.models;
 
 import jakarta.persistence.*;
 
@@ -10,13 +10,21 @@ public class usuariosModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true,nullable = false)
     private int id_usuario;
+    @Column
     private String nombre;
+    @Column
     private String apellido_p;
+    @Column
     private String apellido_m;
+    @Column
     private String status_u;
+    @Column
     private String direccion;
+    @Column
     private String passwd;
+    @Column
     private String fecha_ingreso;
+    @Column
     private String puesto;
 
     //set and get id_usuario
